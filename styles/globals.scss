@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .infoText {
+        @apply 
+            text-sm 
+            bg-slate-700/50 
+            max-w-xs
+            p-3
+            transition-colors
+            duration-100
+            cursor-pointer
+            rounded-md
+        ;
+
+        &:hover {
+            @apply bg-slate-900/50;
+        }
+
+    }
+}
+
+
+@keyframes animateScrollLeft {
+    from {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+    }
+}

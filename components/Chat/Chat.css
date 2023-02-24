@@ -1,0 +1,44 @@
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .ChatInput {
+    line-height: 20px;
+    width: calc(100% - 60px);
+    @apply block bg-transparent h-full min-h-[80px] max-h-[200px] resize-none overflow-hidden pr-2 cursor-auto;
+  }
+  .ChatInput:focus {
+    @apply outline-none;
+  }
+  .ChatInput::-webkit-scrollbar {
+    cursor: pointer !important;
+    @apply w-[10px];
+  }
+  .ChatInput::-webkit-scrollbar-track {
+    @apply bg-transparent w-10 rounded-full;
+  }
+  .ChatInput::-webkit-scrollbar-thumb {
+    @apply cursor-pointer bg-gray-700 hover:bg-gray-600 rounded-full;
+  }
+  .ChatSubmitButton {
+    @apply absolute
+            w-10 h-10 
+            flex items-center justify-center 
+            right-5 bottom-5
+            bg-green-800 hover:bg-green-700
+            shadow-md shadow-slate-800
+            rounded-md
+            cursor-pointer;
+  }
+  .ChatSubmitButton.disabled {
+    @apply bg-gray-500 cursor-not-allowed hover:bg-gray-500;
+  }
+  .ChatRow {
+    @apply py-10 px-5;
+  }
+  .ChatRow:nth-of-type(even) {
+    @apply bg-[#383a4f];
+  }
+  .ChatRow p {
+    @apply text-base leading-relaxed text-gray-100;
+  }
+}/*# sourceMappingURL=Chat.css.map */

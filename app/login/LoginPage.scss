@@ -1,0 +1,58 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .LoginContainer{
+
+        form {
+            @apply mb-5;
+            
+            input {
+                @apply w-full h-11 p-2 outline-none;
+                &:focus {
+                    @apply outline-none;
+                }
+            }
+    
+            button[type="submit"] {
+                @apply bg-green-700 hover:bg-green-800 text-white p-3 transition-colors duration-100 mt-3 rounded-sm tracking-wider;
+            }
+        }
+    
+        .loginButton{
+            @apply bg-white w-full p-3 rounded-sm flex flex-row;
+            &.google {
+                box-shadow: rgb(0 0 0 / 50%) 0px 1px 2px;
+                @apply bg-white text-base text-gray-800;
+
+                &:hover{
+                    background: rgb(239, 240, 238);
+                }
+            }
+            &.github {
+                background: rgb(51, 51, 51);
+                box-shadow: rgb(0 0 0 / 50%) 0px 1px 2px;
+                
+                @apply text-white;
+                
+                &:hover{
+                    background: rgb(81, 81, 81);
+                }
+
+                svg {
+                    @apply fill-white;
+                }
+            }
+
+            svg {
+                @apply absolute;
+            }
+
+            span {
+                @apply pl-10;
+            }
+        }
+    }
+
+}
